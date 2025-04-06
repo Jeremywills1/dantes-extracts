@@ -3,9 +3,9 @@ import "./App.css";
 
 function App() {
   const products = [
-    { name: "Vapes", img: "/images/dantes_dispo_single_angle.jpg" },
-    { name: "Gummies", img: "/images/dantes_gummies_brandstyle.jpg" },
-    { name: "Disposables", img: "/images/dantes_510_cart_final.jpg" },
+    { name: "Vapes", img: "/images/Vapes.jpg" },
+    { name: "Gummies", img: "/images/Gummies.jpg" },
+    { name: "Disposables", img: "/images/Disposables.jpg" },
   ];
 
   return (
