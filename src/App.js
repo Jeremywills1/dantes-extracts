@@ -32,7 +32,7 @@ function App() {
             <img
               src={p.img}
               alt={p.name}
-              className="w-full h-80 object-contain bg-black"
+              className="w-full h-[600px] object-cover"
             />
             <div className="p-4">
               <h3 className="text-xl font-semibold text-yellow-400">{p.name}</h3>
