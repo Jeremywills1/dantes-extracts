@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import './App.css';
 
 // Main App
 function App() {
@@ -47,6 +46,9 @@ function App() {
           <Link to="/" className="hover:text-yellow-300 transition">
             Home
           </Link>
+          <Link to="/shop" className="hover:text-yellow-300 transition">
+            Shop
+          </Link>
           <Link to="/cart" className="relative hover:text-yellow-300 transition">
             Cart
             {cart.length > 0 && (
@@ -54,9 +56,6 @@ function App() {
                 {cart.length}
               </span>
             )}
-          </Link>
-          <Link to="/shop" className="hover:text-yellow-300 transition">
-            Shop
           </Link>
         </div>
       </nav>
@@ -114,17 +113,6 @@ function App() {
         <Route
           path="/cart"
           element={<CartPage cart={cart} />}
-        />
-
-        {/* Shop Page (placeholder for now) */}
-        <Route
-          path="/shop"
-          element={
-            <div className="shop-page">
-              <h2>Shop Page</h2>
-              <p>Here you can browse all our products!</p>
-            </div>
-          }
         />
       </Routes>
     </Router>
