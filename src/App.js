@@ -3,9 +3,9 @@ import "./App.css";
 
 function App() {
   const products = [
-    { name: "Vapes", img: "/images/Vapes.jpg" },
-    { name: "Gummies", img: "/images/Gummies.jpg" },
-    { name: "Disposables", img: "/images/Disposables.jpg" },
+    { name: "Vapes", img: "/images/dantes_dispo_single_angle.jpg" },
+    { name: "Gummies", img: "/images/dantes_gummies_brandstyle.jpg" },
+    { name: "Disposables", img: "/images/dantes_510_cart_final.jpg" },
   ];
 
   return (
@@ -26,11 +26,20 @@ function App() {
       {/* Products */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-16 bg-neutral-900">
         {products.map((p) => (
-          <div key={p.name} className="bg-black rounded-xl shadow-lg overflow-hidden hover:shadow-yellow-400/50 transition">
-            <img src={p.img} alt={p.name} className="w-full h-48 object-cover" />
-            <div className="p-4">
+          <div
+            key={p.name}
+            className="bg-black rounded-xl shadow-lg overflow-hidden hover:shadow-yellow-400/50 transition flex flex-col items-center justify-center"
+          >
+            <img
+              src={p.img}
+              alt={p.name}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-4 text-center">
               <h3 className="text-xl font-semibold text-yellow-400">{p.name}</h3>
-              <p className="text-sm text-gray-400 mt-2">Premium HHC crafted with care.</p>
+              <p className="text-sm text-gray-400 mt-2">
+                Premium HHC crafted with care.
+              </p>
             </div>
           </div>
         ))}
@@ -40,15 +49,20 @@ function App() {
       <section className="px-8 py-20 text-center bg-black">
         <h2 className="text-4xl font-bold mb-6 text-yellow-400">Who is Dante?</h2>
         <p className="max-w-3xl mx-auto text-lg text-gray-400">
-          Born from legacy. Inspired by loyalty. Dante’s Extracts was named after the rabbit who never left our side.
-          We carry that same energy into every product — loyalty to quality, no shortcuts, no compromise.
+          Born from legacy. Inspired by loyalty. Dante’s Extracts was named
+          after the rabbit who never left our side. We carry that same energy
+          into every product — loyalty to quality, no shortcuts, no compromise.
         </p>
       </section>
 
       {/* Email Signup */}
       <section className="px-8 py-16 bg-neutral-900 text-center">
-        <h3 className="text-2xl font-semibold text-yellow-400 mb-2">Join the Dante Circle</h3>
-        <p className="text-gray-400 mb-6">Get early drops, exclusive offers, and behind-the-scenes fire.</p>
+        <h3 className="text-2xl font-semibold text-yellow-400 mb-2">
+          Join the Dante Circle
+        </h3>
+        <p className="text-gray-400 mb-6">
+          Get early drops, exclusive offers, and behind-the-scenes fire.
+        </p>
         <div className="flex justify-center flex-wrap gap-2">
           <input
             type="email"
