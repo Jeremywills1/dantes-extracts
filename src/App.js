@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 
 // Main App
 function App() {
@@ -80,7 +80,7 @@ function App() {
                   <Link
                     key={p.name}
                     to={`/${p.name.toLowerCase()}`}
-                    className="bg-zinc-900 rounded-2xl shadow-xl hover:shadow-yellow-400/50 transition flex flex-col items-center text-center overflow-hidden"
+                    className="bg-zinc-900 rounded-2xl shadow-xl hover:shadow-yellow-400/50 transition transform hover:scale-105 flex flex-col items-center text-center overflow-hidden"
                   >
                     <img
                       src={p.img}
@@ -114,7 +114,29 @@ function App() {
           path="/cart"
           element={<CartPage cart={cart} />}
         />
+
+        {/* Shop Page */}
+        <Route
+          path="/shop"
+          element={
+            <div className="min-h-screen bg-black text-white font-sans px-6 py-10">
+              <h2 className="text-4xl font-bold text-yellow-400">Shop Page</h2>
+              <p className="text-gray-300 mt-4">Here you can browse all our products!</p>
+            </div>
+          }
+        />
       </Routes>
+
+      {/* Conditionally Render Footer */}
+      {window.location.pathname !== '/shop' && (
+        <footer className="bg-black text-yellow-400 py-6 text-center">
+          <p>Follow us on social media</p>
+          <div className="flex justify-center gap-6 mt-4">
+            <a href="#" className="hover:text-yellow-300 transition">Instagram</a>
+            <a href="#" className="hover:text-yellow-300 transition">Facebook</a>
+          </div>
+        </footer>
+      )}
     </Router>
   );
 }
