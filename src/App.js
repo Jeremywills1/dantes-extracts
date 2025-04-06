@@ -3,9 +3,9 @@ import "./App.css";
 
 function App() {
   const products = [
-    { name: "Vapes", img: "/images/vapes.jpg" },
-    { name: "Gummies", img: "/images/gummies.jpg" },
-    { name: "Disposables", img: "/images/disposables.jpg" },
+    { name: "Vapes", img: "/images/Vapes.jpg" },
+    { name: "Gummies", img: "/images/Gummies.jpg" },
+    { name: "Disposables", img: "/images/Disposables.jpg" },
   ];
 
   return (
