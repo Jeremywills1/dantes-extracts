@@ -3,9 +3,11 @@ import "./App.css";
 
 function App() {
   const products = [
+<<<<<<< HEAD
     { name: "Vapes", img: "/images/vapes.jpg" },
     { name: "Gummies", img: "/images/gummies.jpg" },
     { name: "Disposables", img: "/images/disposables.jpg" },
+
   ];
 
   return (
